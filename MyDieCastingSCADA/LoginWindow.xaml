@@ -1,0 +1,16 @@
+<Window x:Class="MyDieCastingSCADA.LoginWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="上位机登录" Width="430" Height="420" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+ <Grid Background="#F4F4F8">
+  <Border Width="350" Padding="28" Background="White" CornerRadius="12" VerticalAlignment="Center">
+   <StackPanel>
+    <TextBlock Text="压铸监控系统" FontSize="25" FontWeight="Bold" Foreground="#55479F"/>
+    <TextBlock x:Name="ModeText" Margin="0,5,0,20" Foreground="#777"/>
+    <TextBlock Text="用户名"/><TextBox x:Name="UsernameBox" Height="34" Margin="0,5,0,12"/>
+    <TextBlock Text="密码"/><PasswordBox x:Name="PasswordBox" Height="34" Margin="0,5,0,12"/>
+    <StackPanel x:Name="ConfirmPanel"><TextBlock Text="确认密码"/><PasswordBox x:Name="ConfirmPasswordBox" Height="34" Margin="0,5,0,12"/></StackPanel>
+    <TextBlock x:Name="ErrorText" Foreground="#D32F2F" TextWrapping="Wrap" Margin="0,0,0,8"/>
+    <Button x:Name="SubmitButton" Height="38" Background="#7163BA" Foreground="White" Click="Submit_Click" IsDefault="True"/>
+   </StackPanel>
+  </Border>
+ </Grid>
+</Window>

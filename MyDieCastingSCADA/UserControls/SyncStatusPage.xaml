@@ -1,0 +1,38 @@
+<UserControl x:Class="MyDieCastingSCADA.UserControls.SyncStatusPage"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+ <Grid Margin="18">
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+  <DockPanel>
+   <StackPanel>
+    <TextBlock Text="数据库同步中心" FontSize="24" FontWeight="Bold"/>
+    <TextBlock Text="查看本地待同步任务、失败原因，并将失败任务重新加入同步队列。" Foreground="#777" Margin="0,4,0,0"/>
+   </StackPanel>
+   <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
+    <Button Content="刷新" Width="90" Height="32" Margin="5" Click="Refresh_Click"/>
+    <Button Content="重试失败任务" Width="120" Height="32" Margin="5" Click="Retry_Click"/>
+   </StackPanel>
+  </DockPanel>
+  <Border Grid.Row="1" Background="#F5F6FA" CornerRadius="8" Padding="12" Margin="0,12">
+   <Grid>
+    <Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+    <StackPanel><TextBlock Text="连接状态" Foreground="#777"/><TextBlock Text="{Binding ConnectionState}" FontWeight="Bold"/></StackPanel>
+    <StackPanel Grid.Column="1"><TextBlock Text="待同步" Foreground="#777"/><TextBlock Text="{Binding PendingCount}" FontSize="20" Foreground="#E67E22"/></StackPanel>
+    <StackPanel Grid.Column="2"><TextBlock Text="失败" Foreground="#777"/><TextBlock Text="{Binding FailedCount}" FontSize="20" Foreground="#E74C3C"/></StackPanel>
+    <StackPanel Grid.Column="3"><TextBlock Text="永久失败" Foreground="#777"/><TextBlock Text="{Binding DeadCount}" FontSize="20" Foreground="#C0392B"/></StackPanel>
+    <StackPanel Grid.Column="4"><TextBlock Text="最近时间" Foreground="#777"/><TextBlock Text="{Binding TimeSummary}" TextWrapping="Wrap"/></StackPanel>
+   </Grid>
+  </Border>
+  <DataGrid Grid.Row="2" ItemsSource="{Binding Failures}" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" HeadersVisibility="Column">
+   <DataGrid.Columns>
+    <DataGridTextColumn Header="创建时间" Binding="{Binding CreatedAt, StringFormat=yyyy-MM-dd HH:mm:ss}" Width="155"/>
+    <DataGridTextColumn Header="类型" Binding="{Binding EntityType}" Width="120"/>
+    <DataGridTextColumn Header="设备" Binding="{Binding DeviceName}" Width="120"/>
+    <DataGridTextColumn Header="业务标识" Binding="{Binding EntityKey}" Width="180"/>
+    <DataGridTextColumn Header="状态" Binding="{Binding Status}" Width="80"/>
+    <DataGridTextColumn Header="重试次数" Binding="{Binding RetryCount}" Width="80"/>
+    <DataGridTextColumn Header="最后错误" Binding="{Binding LastError}" Width="*"/>
+   </DataGrid.Columns>
+  </DataGrid>
+ </Grid>
+</UserControl>

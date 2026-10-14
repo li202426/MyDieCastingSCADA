@@ -1,0 +1,70 @@
+﻿<UserControl 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    mc:Ignorable="d"
+    x:Class="MyDieCastingSCADA.UserControls.Line1"
+    d:DesignHeight="600" d:DesignWidth="1100">
+    <UserControl.Resources>
+        <Style x:Key="PlcButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#6a5dae"/>
+            <Setter Property="Foreground" Value="#f0eff6"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="18"
+                                BorderBrush="Transparent">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#8276c0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Viewbox Stretch="Uniform" Margin="0">
+        <Border CornerRadius="20" Background="#FF7B6EC3" Width="1100" Height="620">
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="生产线一 ： PLC 设备列表" 
+                           Foreground="#f0eff6" 
+                           FontSize="18" 
+                           FontWeight="SemiBold" 
+                           Margin="0 0 0 10"/>
+                <ItemsControl ItemsSource="{Binding PlcDevices}" Margin="20">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="8" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource PlcButtonStyle}" 
+                                    Click="PlcButton_Click" 
+                                    Tag="{Binding Tag}"
+                                    Margin="2">
+                                <StackPanel>
+                                    <Icon:PackIconMaterial Kind="RobotIndustrial" Width="38" Height="38" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding DisplayName}" FontSize="13.5" FontWeight="SemiBold" TextAlignment="Center" Margin="0 6 0 0"/>
+                                    <TextBlock Text="{Binding Ip}" FontSize="12" Opacity="0.85" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </Border>
+    </Viewbox>
+</UserControl>

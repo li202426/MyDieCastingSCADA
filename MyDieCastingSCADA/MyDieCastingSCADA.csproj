@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Configs\**\*.json" />
+    <None Remove="Images\52822624215_2e5d62e50a_o.jpg" />
+    <None Remove="Images\55181686977-7e768c5ab5-o.jpg" />
+    <None Remove="Images\55182789108-f13e3eb9ec-o.jpg" />
+    <None Remove="Images\55182992165-bcbb710703-o.jpg" />
+    <None Remove="Images\55183079963-98d70178ff-o.jpg" />
+    <None Remove="Images\P1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configs\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="6.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="S7netplus" Version="0.20.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MySCADA.Business\MySCADA.Business.csproj" />
+    <ProjectReference Include="..\MySCADA.Models\MySCADA.Models.csproj" />
+    <ProjectReference Include="..\MySCADA.Services\MySCADA.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\P1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UserControls\HistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

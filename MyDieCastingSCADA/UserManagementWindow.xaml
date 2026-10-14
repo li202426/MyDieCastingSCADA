@@ -1,0 +1,15 @@
+<Window x:Class="MyDieCastingSCADA.UserManagementWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="用户管理" Width="760" Height="500" WindowStartupLocation="CenterOwner">
+ <Grid Margin="16"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+  <Border Padding="12" Background="#F4F4F8" CornerRadius="8"><StackPanel Orientation="Horizontal">
+   <TextBox x:Name="UsernameBox" Width="130" Height="30" Margin="4" ToolTip="用户名"/>
+   <PasswordBox x:Name="PasswordBox" Width="150" Height="30" Margin="4" ToolTip="初始密码"/>
+   <ComboBox x:Name="RoleBox" Width="110" Height="30" Margin="4" SelectedIndex="0"><ComboBoxItem Content="操作员" Tag="Operator"/><ComboBoxItem Content="工艺员" Tag="Engineer"/><ComboBoxItem Content="管理员" Tag="Administrator"/></ComboBox>
+   <Button Content="创建用户" Width="100" Margin="8,4" Click="Create_Click"/>
+   <TextBlock x:Name="MessageText" Foreground="#C62828" VerticalAlignment="Center"/>
+  </StackPanel></Border>
+  <DataGrid x:Name="UserGrid" Grid.Row="1" Margin="0,12,0,0" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False">
+   <DataGrid.Columns><DataGridTextColumn Header="用户名" Binding="{Binding Username}" Width="*"/><DataGridTextColumn Header="角色" Binding="{Binding RoleText}" Width="120"/><DataGridCheckBoxColumn Header="启用" Binding="{Binding IsEnabled}" Width="80"/><DataGridTextColumn Header="创建时间" Binding="{Binding CreatedAt, StringFormat=yyyy-MM-dd HH:mm:ss}" Width="160"/><DataGridTextColumn Header="最后登录" Binding="{Binding LastLoginAt, StringFormat=yyyy-MM-dd HH:mm:ss}" Width="160"/><DataGridTemplateColumn Header="操作" Width="90"><DataGridTemplateColumn.CellTemplate><DataTemplate><Button Content="启用/停用" Tag="{Binding}" Click="Toggle_Click"/></DataTemplate></DataGridTemplateColumn.CellTemplate></DataGridTemplateColumn></DataGrid.Columns>
+  </DataGrid>
+ </Grid>
+</Window>

@@ -1,0 +1,15 @@
+{
+  "WritesEnabled": true,
+  "AllowWriteWhileInjectionRunning": false,
+  "MaxSnapshotAgeSeconds": 5,
+  "MinimumControlMode": 0,
+  "MaximumControlMode": 2,
+  "MinimumThermocoupleNumber": 0,
+  "MaximumThermocoupleNumber": 32,
+  "MinimumTemperature": 0.0,
+  "MaximumTemperature": 1000.0,
+  "MinimumFlow": 0,
+  "MaximumFlow": 10000,
+  "MinimumTime": 0,
+  "MaximumTime": 3600000
+}

@@ -1,0 +1,157 @@
+﻿<Window x:Class="MyDieCastingSCADA.ViceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Height="760" 
+        Width="1280" 
+        Background="Transparent"  
+        ResizeMode="CanResize"
+        AllowsTransparency="True" 
+        WindowStyle="None" 
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Window.Resources>
+    <Border Background="#cfd5e5" 
+            CornerRadius="20" 
+            BorderThickness="2" 
+            BorderBrush="#ebedf3"
+            Padding="12">
+        <Border CornerRadius="18">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#fefefe" Offset="0"/>
+                    <GradientStop Color="#ededef" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" 
+                        Background="#7163ba" 
+                        CornerRadius="16,16,0,0" 
+                        Padding="15 12 15 12"
+                         MouseDown="TitleBar_MouseDown">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Icon:PackIconMaterial Kind="ChartLine" 
+                                                   Style="{StaticResource menuButtonIcon}" 
+                                                   Width="28" Height="28" 
+                                                   Foreground="White"/>
+                            <TextBlock x:Name="txtCurrentPage" Text="监控窗口 · 实时显示" 
+                                       Foreground="White" 
+                                       FontSize="15" 
+                                       FontWeight="SemiBold"
+                                       Margin="12,0,0,0"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel x:Name="TopNavigationPanel" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button x:Name="btnDeviceWindow" Content="实时显示"
+                                Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4"
+                                Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Temperature"/>
+                            <Button x:Name="btnOverview" Content="实时日志" 
+                                      Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4"
+                                      Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="RealTimeLog"/>
+                            <Button x:Name="btnParameter" Content="工艺下发" 
+                                Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4"
+                                Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Parameter"/>    
+                            <Button x:Name="btnAlarm" Content="报警记录" 
+                                Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4"
+                                Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Alarm"/>
+                            <Button x:Name="btnHistory" Content="工艺面板" 
+                                Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4"
+                                Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="History"/>
+                            <Button Content="实时曲线" Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4" Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Trend"/>
+                            <Button Content="数据查询" Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4" Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Data"/>
+                            <Button x:Name="btnSync" Content="同步状态" Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4" Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Sync"/>
+                            <Button x:Name="btnMold" Content="模具管理" Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4" Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Mold"/>
+                            <Button Content="控制研究" Width="68" Height="42" Margin="2,0" FontSize="14" Padding="4" Style="{StaticResource menuButton}" Click="NavigationButton_Click" Tag="Control"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" 
+                                    Orientation="Horizontal" 
+                                    VerticalAlignment="Center">
+                            <Button x:Name="btnUserManagement" Content="用户管理" Width="65" Height="34" FontSize="12" Style="{StaticResource menuButton}" Click="UserManagement_Click"/>
+                            <Button Content="退出登录" Width="65" Height="34" FontSize="12" Style="{StaticResource menuButton}" Click="Logout_Click"/>
+                            <Button Width="40" Height="40" Style="{StaticResource menuButton}" 
+                                    Click="BtnMinimize_Click">
+                                <Icon:PackIconMaterial Kind="WindowMinimize" Foreground="White"/>
+                            </Button>
+                            <Button x:Name="btnMaxRestore" Width="40" Height="40" 
+                                    Style="{StaticResource menuButton}" 
+                                    Click="MaxRestoreButton_Click">
+                                <Icon:PackIconMaterial x:Name="MaxIcon" 
+                                                       Kind="WindowMaximize" 
+                                                       Foreground="White"/>
+                            </Button>
+                            <Button Width="40" Height="40" Style="{StaticResource menuButton}" 
+                                    Click="ExitButton_Click">
+                                <Icon:PackIconMaterial Kind="Close" Foreground="White"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" 
+                        Margin="10 8 10 8" 
+                        Background="White" 
+                        CornerRadius="12"
+                        BorderBrush="#e0e0e0" 
+                        BorderThickness="1">        
+                    <ContentControl x:Name="MainContent" 
+                                      Margin="5"/>
+                </Border>
+                <Border Grid.Row="2" 
+                        Background="#f4f4f6" 
+                        CornerRadius="0,0,16,16" 
+                        Padding="12 8 12 8"
+                        BorderBrush="#e0e0e0" 
+                        BorderThickness="0,1,0,0">
+                    <Grid>
+                        <TextBlock x:Name="txtStatus" 
+                                   Text="{Binding CommunicationStatus}"
+                                   ToolTip="{Binding LastCommunicationError}"
+                                   Foreground="{Binding CommunicationStatusBrush}"
+                                   FontSize="14" 
+                                   VerticalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="btnDatabaseWrite"
+                                    Content="连接数据库"
+                                    Click="DatabaseWriteButton_Click"
+                                    MinWidth="100" Height="28"
+                                    Padding="10,2" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding DatabaseSyncStatus}"
+                                       VerticalAlignment="Center"
+                                       Foreground="#666"
+                                       FontSize="13"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" 
+                                    HorizontalAlignment="Right">
+                            <TextBlock Text="最后成功采集：" 
+                                       VerticalAlignment="Center" 
+                                       Foreground="#666"/>
+                            <TextBlock x:Name="txtTime" 
+                                       Text="{Binding LastSuccessfulSampleText}"
+                                       VerticalAlignment="Center" 
+                                       Margin="8,0,0,0"
+                                       Foreground="#333"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <ResizeGrip Grid.Row="2" 
+                            HorizontalAlignment="Right" 
+                            VerticalAlignment="Bottom" 
+                            Margin="0 0 15 10"
+                            Width="22" Height="22"/>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

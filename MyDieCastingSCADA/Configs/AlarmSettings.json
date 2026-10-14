@@ -1,0 +1,12 @@
+{
+  "CommunicationAlarmEnabled": true,
+  "TemperatureAlarmEnabled": true,
+  "FlowAlarmEnabled": true,
+  "AluminiumHighDeviation": 20.0,
+  "FurnaceHighDeviation": 20.0,
+  "MinimumFlowRatio": 0.70,
+  "FlowRecoveryRatio": 0.80,
+  "TemperatureRecoveryHysteresis": 5.0,
+  "TriggerDelaySeconds": 3,
+  "RecoveryDelaySeconds": 3
+}

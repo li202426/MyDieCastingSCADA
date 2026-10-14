@@ -1,0 +1,425 @@
+{
+  "PressureSet": [
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 40, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 44, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 48, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 52, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 56, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 60, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 64, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 68, "DataType": "Real" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 72, "DataType": "Real" }
+  ],
+  "TimeSet": [
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 80, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 84, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 88, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 92, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 96, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 100, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 104, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 108, "DataType": "DInt" },
+    { "Area": "DB", "DBNumber": 5, "ByteOffset": 112, "DataType": "DInt" }
+  ],
+  "CoolingTimeMax":            { "Area": "DB", "DBNumber": 5, "ByteOffset": 116, "DataType": "DInt" },
+  "CoolingTimeMin":            { "Area": "DB", "DBNumber": 5, "ByteOffset": 120, "DataType": "DInt" },
+  "CastingOpenTemperature":    { "Area": "DB", "DBNumber": 5, "ByteOffset": 124, "DataType": "Real" },
+  "CastingOpenMode":           { "Area": "DB", "DBNumber": 5, "ByteOffset": 128, "DataType": "Int" },
+  "CastingOpenThermocoupleNm": { "Area": "DB", "DBNumber": 5, "ByteOffset": 130, "DataType": "Int" },
+  "MoldNameString":            { "Area": "DB", "DBNumber": 5, "ByteOffset": 4, "DataType": "String", "Length": 26 },
+  "CoolingChannels": [
+    {
+      "DBNumber": 15,
+      "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }
+    },
+    {
+      "DBNumber": 16,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 16, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 16, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 16, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 16, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 16, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 16, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 16, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 16, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 16, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 16, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 16, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 16, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 16, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 16, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 16, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 16, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 17,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 17, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 17, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 17, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 17, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 17, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 17, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 17, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 17, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 17, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 17, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 17, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 17, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 17, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 17, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 17, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 17, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 18,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 18, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 18, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 18, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 18, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 18, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 18, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 18, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 18, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 18, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 18, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 18, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 18, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 18, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 18, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 18, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 18, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 19,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 19, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 19, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 19, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 19, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 19, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 19, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 19, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 19, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 19, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 19, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 19, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 19, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 19, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 19, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 19, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 19, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 20,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 21,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 22,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 23,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 24,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 25,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 26,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 27,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 28,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 29,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },
+    {
+      "DBNumber": 30,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    },    
+    {
+      "DBNumber": 31,
+       "Air": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 2,  "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 4,  "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 6,  "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 10, "DataType": "Int" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 12, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 14, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 18, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 22, "DataType": "DInt" }
+      },
+      "Water": {
+        "AuMode":   { "Area": "DB", "DBNumber": 15, "ByteOffset": 26, "DataType": "Int" },
+        "TheNm":    { "Area": "DB", "DBNumber": 15, "ByteOffset": 28, "DataType": "Int" },
+        "Temp":     { "Area": "DB", "DBNumber": 15, "ByteOffset": 30, "DataType": "Real" },
+        "FlowSet":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 34, "DataType": "Real" },
+        "ConMode":  { "Area": "DB", "DBNumber": 15, "ByteOffset": 38, "DataType": "Int" },
+        "DelayTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 40, "DataType": "DInt" },
+        "OpenTime": { "Area": "DB", "DBNumber": 15, "ByteOffset": 44, "DataType": "DInt" },
+        "CrossTime":{ "Area": "DB", "DBNumber": 15, "ByteOffset": 48, "DataType": "DInt" }
+      }     
+    }
+  ],
+  "DownloadCastingOpenBlock": { "Area": "DB", "DBNumber": 5, "ByteOffset": 124, "DataType": "ByteArray", "Length": 8 },
+  "DownloadTimeBlock":        { "Area": "DB", "DBNumber": 5, "ByteOffset": 112, "DataType": "ByteArray", "Length": 12 }
+}

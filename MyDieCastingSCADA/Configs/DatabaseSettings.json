@@ -1,0 +1,6 @@
+{
+  "SqlServerEnabled": true,
+  "SqlServerConnectionString": "Server=.;Database=DATA.1;Integrated Security=True;TrustServerCertificate=True;",
+  "CommandTimeoutSeconds": 5,
+  "RunningDataRetentionDays": 0
+}

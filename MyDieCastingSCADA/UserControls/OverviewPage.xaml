@@ -1,0 +1,25 @@
+﻿<UserControl  x:Class="MyDieCastingSCADA.UserControls.OverviewPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="700" Width="1000"
+        >
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding DeviceName}" 
+                   FontSize="28" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="模具温度（8通道）" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
+            <ItemsControl ItemsSource="{Binding Temperatures}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" FontSize="16" Margin="5"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>
